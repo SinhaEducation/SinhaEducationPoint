@@ -21,20 +21,20 @@ const ContactPage = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <InstagramIcon />
+          <InstagramIcon fontSize="large" />
         </IconButton>
         <IconButton
           href="https://facebook.com"
           target="_blank"
           rel="noreferrer"
         >
-          <FacebookIcon />
+          <FacebookIcon fontSize="large" />
         </IconButton>
         <IconButton href="https://twitter.com" target="_blank" rel="noreferrer">
-          <TwitterIcon />
+          <TwitterIcon fontSize="large" />
         </IconButton>
         <IconButton href="mailto:hardik0casr@gmail.com">
-          <MailIcon />
+          <MailIcon fontSize="large" />
         </IconButton>
       </div>
     </div>
@@ -76,12 +76,6 @@ const useStyles = makeStyles((theme) => ({
     position: "center",
     alignItems: "space-around",
     justifyContent: "center",
-    // "& a": {
-    //   margin: "10px",
-    //   fontSize: "2rem",
-    //   textAlign: "center",
-    //   display: "inline-block",
-    // },
   },
 }));
 

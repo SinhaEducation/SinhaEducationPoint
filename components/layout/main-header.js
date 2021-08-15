@@ -21,17 +21,17 @@ const MainHeader = () => {
             SINHA EDUCATION POINT
           </Typography>
           <Link href="/#home">
-            <a>
+            <a className={classes.links}>
               <Button>Home</Button>
             </a>
           </Link>
           <Link href="/#about">
-            <a>
+            <a className={classes.links}>
               <Button>About</Button>
             </a>
           </Link>
           <Link href="/#contact">
-            <a>
+            <a className={classes.links}>
               <Button>Contact</Button>
             </a>
           </Link>
@@ -48,6 +48,11 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
     fontFamily: "Open Sans Condensed, sans-serif",
+  },
+  links: {
+    "@media (max-width: 767px)": {
+      display: "none",
+    },
   },
 }));
 
