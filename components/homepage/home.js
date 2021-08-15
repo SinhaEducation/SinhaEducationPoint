@@ -36,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
   },
   main: {
     maxWidth: "800px",
+    margin: "0 20px",
     display: "flex",
     flexDirection: "column",
   },
@@ -43,7 +44,8 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "max(30px, 3.5vw)",
     fontFamily: "Style Script, cursive",
     fontWeight: "lighter",
-    margin: "0 auto",
+    textAlign: "center",
+    margin: "20px auto",
   },
   button: {
     margin: "0 auto",

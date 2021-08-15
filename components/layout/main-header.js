@@ -30,6 +30,11 @@ const MainHeader = () => {
               <Button>About</Button>
             </a>
           </Link>
+          <Link href="/#contact">
+            <a>
+              <Button>Contact</Button>
+            </a>
+          </Link>
         </Toolbar>
       </AppBar>
     </div>

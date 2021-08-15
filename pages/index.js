@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Fragment } from "react";
 import AboutPage from "../components/homepage/about";
+import ContactPage from "../components/homepage/contact";
 import HeroPage from "../components/homepage/home";
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
       </Head>
       <HeroPage />
       <AboutPage />
+      <ContactPage />
     </Fragment>
   );
 };
