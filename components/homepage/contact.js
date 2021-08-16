@@ -15,27 +15,45 @@ const ContactPage = () => {
         <hr />
       </h3>
       <p>Feel free to contact us on social media.</p>
-      <div className={classes.social}>
-        <IconButton
-          href="https://instagram.com"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <InstagramIcon fontSize="large" />
-        </IconButton>
-        <IconButton
-          href="https://facebook.com"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FacebookIcon fontSize="large" />
-        </IconButton>
-        <IconButton href="https://twitter.com" target="_blank" rel="noreferrer">
-          <TwitterIcon fontSize="large" />
-        </IconButton>
-        <IconButton href="mailto:hardik0casr@gmail.com">
-          <MailIcon fontSize="large" />
-        </IconButton>
+      <div className={classes.contact}>
+        <div className={classes.social}>
+          <IconButton
+            href="https://instagram.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <InstagramIcon fontSize="large" />
+          </IconButton>
+          <IconButton
+            href="https://facebook.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FacebookIcon fontSize="large" />
+          </IconButton>
+          <IconButton
+            href="https://twitter.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <TwitterIcon fontSize="large" />
+          </IconButton>
+          <IconButton href="mailto:hardik0casr@gmail.com">
+            <MailIcon fontSize="large" />
+          </IconButton>
+        </div>
+        <div className={classes.address}>
+          <address>
+            <strong>Head Office:</strong> 265-B, PKT-N, Sarita Vihar, New Delhi
+          </address>
+          <address>
+            <strong>Address:</strong> Super Home Tower, flat no 202, Defence
+            enclave, Sector 44, Noida
+          </address>
+          <address>
+            <strong>Phone no.:</strong> +91 8700849100, 9990414101
+          </address>
+        </div>
       </div>
     </div>
   );
@@ -70,12 +88,30 @@ const useStyles = makeStyles((theme) => ({
       margin: "20px 0",
     },
   },
+  contact: {
+    display: "flex",
+    flexWrap: "wrap",
+    alignItems: "center",
+    justifyContent: "center",
+    "@media (max-width: 767px)": {
+      flexDirection: "column",
+    },
+  },
   social: {
     padding: "10px",
     display: "flex",
     position: "center",
     alignItems: "space-around",
     justifyContent: "center",
+  },
+  address: {
+    maxWidth: "400px",
+    paddingLeft: "15px",
+    borderLeft: `2px solid ${theme.palette.primary.contrastText}`,
+    "@media (max-width: 767px)": {
+      border: "none",
+      margin: "10px 25px",
+    },
   },
 }));
 

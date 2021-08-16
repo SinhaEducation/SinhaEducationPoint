@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import Image from "next/image";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
@@ -5,6 +6,7 @@ import PersonIcon from "@material-ui/icons/Person";
 
 const HeroPage = () => {
   const classes = useStyles();
+  const router = useRouter();
 
   return (
     <div id="home" className={classes.root}>
@@ -17,6 +19,7 @@ const HeroPage = () => {
           variant="contained"
           className={classes.button}
           startIcon={<PersonIcon />}
+          onClick={() => router.push("/register")}
         >
           REGISTER NOW!
         </Button>
