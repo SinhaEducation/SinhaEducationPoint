@@ -15,7 +15,6 @@ const Home = () => {
           name="description"
           content="Sinha Education Point | Best coaching institute in area"
         />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <HeroPage />
       <AboutPage />

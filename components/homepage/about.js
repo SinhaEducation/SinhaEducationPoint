@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { makeStyles } from "@material-ui/core/styles";
+import { Hidden } from "@material-ui/core";
 
 const AboutPage = () => {
   const classes = useStyles();
@@ -11,7 +12,12 @@ const AboutPage = () => {
       </h3>
       <div className={classes.content}>
         <div className={classes.image}>
-          <Image src="/logo_5.svg" alt="brand logo" height="200" width="200" />
+          <Image
+            src="/images/author.jpg"
+            alt="brand logo"
+            height="200"
+            width="200"
+          />
         </div>
         <div className={classes.text}>
           <p>
@@ -71,6 +77,10 @@ const useStyles = makeStyles((theme) => ({
   },
   image: {
     margin: "20px",
+    height: "200px",
+    width: "200px",
+    borderRadius: "50%",
+    overflow: "hidden",
   },
 }));
 

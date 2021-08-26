@@ -44,7 +44,8 @@ const ContactPage = () => {
         </div>
         <div className={classes.address}>
           <address>
-            <strong>Head Office:</strong> 265-B, PKT-N, Sarita Vihar, New Delhi
+            <strong>Head Office:</strong> 265-B, Pocket-N, Sarita Vihar, New
+            Delhi - 110076
           </address>
           <address>
             <strong>Address:</strong> Super Home Tower, flat no 202, Defence
