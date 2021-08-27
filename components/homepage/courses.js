@@ -24,8 +24,13 @@ const CoursesPage = () => {
     },
     {
       id: 4,
-      title: "B. com and BCA",
+      title: "B. Com. and BCA",
       content: "Maths and Accounts",
+    },
+    {
+      id: 5,
+      title: "IIT-JEE and NEET",
+      content: "Physics, Chemistry, Maths and Biology",
     },
   ];
 
@@ -35,7 +40,12 @@ const CoursesPage = () => {
         Courses.
         <hr />
       </h3>
-      <Grid className={classes.grid} container justify="center" spacing={3}>
+      <Grid
+        className={classes.grid}
+        container
+        justifyContent="center"
+        spacing={3}
+      >
         {courses.map((data, i) => (
           <Grid item key={data.id}>
             <CourseCard {...data} />
