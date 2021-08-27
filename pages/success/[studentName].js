@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import Link from "next/link";
 import { makeStyles } from "@material-ui/core/styles";
 
 const Page = () => {
@@ -9,7 +10,15 @@ const Page = () => {
   return (
     <div className={classes.root}>
       <div className={classes.main}>
-        <h2>Thank you {studentName}, for registering.</h2>
+        <h1>Thank you {studentName}, for registering.</h1>
+        <br />
+        <p>
+          To contact us{" "}
+          <Link href="/#contact">
+            <a className={classes.link}>click here</a>
+          </Link>
+          .
+        </p>
       </div>
     </div>
   );
@@ -17,12 +26,23 @@ const Page = () => {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    height: "100vh",
+    height: "90vh",
     backgroundColor: theme.palette.primary.dark,
     color: theme.palette.primary.contrastText,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
   main: {
-    margin: "auto",
+    maxWidth: "400px",
+    textAlign: "center",
+    margin: "20px",
+  },
+  link: {
+    color: theme.palette.primary.contrastText,
+    "&:hover": {
+      textDecoration: "none",
+    },
   },
 }));
 
