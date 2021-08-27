@@ -1,10 +1,7 @@
 import { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-import StudentSection from "./formSections/studentSection";
-import ParentSection from "./formSections/parentSection";
-import AddressSection from "./formSections/addressSection";
-import DateSection from "./formSections/dateSection";
 
 const MainForm = () => {
   const classes = useStyles();
@@ -43,14 +40,217 @@ const MainForm = () => {
       autoComplete="off"
       name="contact"
       method="POST"
-      action={`/success/${formValues.studentName}`}
+      action="/success"
       data-netlify="true"
     >
       <input type="hidden" name="registration-form" value="contact" />
-      <StudentSection handleChange={handleChange} />
-      <ParentSection handleChange={handleChange} />
-      <AddressSection handleChange={handleChange} />
-      <DateSection handleChange={handleChange} />
+      <div className={classes.section}>
+        <h3>Student Details</h3>
+        <TextField
+          required
+          name="studentName"
+          onChange={handleChange}
+          className={classes.textfield}
+          label="Student Name"
+          color="secondary"
+          type="text"
+        />
+        <TextField
+          required
+          name="dateOfBirth"
+          onChange={handleChange}
+          className={classes.textfield}
+          label="Date of Birth"
+          color="secondary"
+          type="date"
+          InputLabelProps={{
+            shrink: true,
+          }}
+        />
+        <TextField
+          required
+          name="gender"
+          onChange={handleChange}
+          className={classes.textfield}
+          label="Gender"
+          color="secondary"
+          type="text"
+        />
+        <TextField
+          required
+          name="classAppliedFor"
+          onChange={handleChange}
+          className={classes.textfield}
+          label="Class Applied For"
+          color="secondary"
+          type="number"
+          InputProps={{ inputProps: { min: 1, max: 12 } }}
+        />
+        <TextField
+          required
+          name="email"
+          onChange={handleChange}
+          className={classes.textfield}
+          label="Email Address"
+          color="secondary"
+          type="email"
+        />
+        <TextField
+          required
+          name="contactNo"
+          onChange={handleChange}
+          className={classes.textfield}
+          label="Contact No"
+          color="secondary"
+          type="tel"
+          inputProps={{ pattern: "[0-9]{10}" }}
+        />
+        <TextField
+          required
+          name="schoolName"
+          onChange={handleChange}
+          className={classes.textfield}
+          label="School Name"
+          color="secondary"
+          type="text"
+        />
+        <TextField
+          required
+          name="percentPrevClass"
+          onChange={handleChange}
+          className={classes.textfield}
+          label="Percentage Obtained in Previous Class"
+          color="secondary"
+          type="number"
+          InputProps={{ inputProps: { min: 0, max: 100 } }}
+        />
+        <TextField
+          required
+          name="subject"
+          onChange={handleChange}
+          className={classes.textfield}
+          label="Subject Applied For"
+          color="secondary"
+          type="text"
+        />
+      </div>
+      <div className={classes.section}>
+        <h3>Gaurdian Details</h3>
+        <TextField
+          name="fatherName"
+          onChange={handleChange}
+          className={classes.textfield}
+          label="Father's Name"
+          color="secondary"
+          type="text"
+        />
+        <TextField
+          name="fatherOccupation"
+          onChange={handleChange}
+          className={classes.textfield}
+          label="Father's Occupation"
+          color="secondary"
+          type="text"
+        />
+        <TextField
+          name="fatherContact"
+          onChange={handleChange}
+          className={classes.textfield}
+          label="Father's Contact No"
+          color="secondary"
+          type="tel"
+          inputProps={{ pattern: "[0-9]{10}" }}
+        />
+        <TextField
+          name="motherName"
+          onChange={handleChange}
+          className={classes.textfield}
+          label="Mother's Name"
+          color="secondary"
+          type="text"
+        />
+        <TextField
+          name="motherOccupation"
+          onChange={handleChange}
+          className={classes.textfield}
+          label="Mother's Occupation"
+          color="secondary"
+          type="text"
+        />
+        <TextField
+          name="motherContact"
+          onChange={handleChange}
+          className={classes.textfield}
+          label="Mother's Contact No"
+          color="secondary"
+          type="tel"
+          inputProps={{ pattern: "[0-9]{10}" }}
+        />
+        <TextField
+          required
+          name="gaurdianName"
+          onChange={handleChange}
+          className={classes.textfield}
+          label="Gaurdian's Name"
+          color="secondary"
+          type="text"
+        />
+        <TextField
+          required
+          name="gaurdianOccupation"
+          onChange={handleChange}
+          className={classes.textfield}
+          label="Gaurdian's Occupation"
+          color="secondary"
+          type="text"
+        />
+        <TextField
+          required
+          name="gaurdianContact"
+          onChange={handleChange}
+          className={classes.textfield}
+          label="Gaurdian's Contact No"
+          color="secondary"
+          type="tel"
+          inputProps={{ pattern: "[0-9]{10}" }}
+        />
+      </div>
+      <div className={classes.section}>
+        <h3>Address Details</h3>
+        <TextField
+          required
+          name="correspondenceAddress"
+          onChange={handleChange}
+          className={classes.textfield}
+          label="Correspondence Address"
+          color="secondary"
+          type="text"
+        />
+        <TextField
+          required
+          name="permanentAddress"
+          onChange={handleChange}
+          className={classes.textfield}
+          label="Permanent Address"
+          color="secondary"
+          type="text"
+        />
+      </div>
+      <div className={classes.section}>
+        <h3>Other info</h3>
+        <TextField
+          required
+          name="dateOfRegistration"
+          onChange={handleChange}
+          className={classes.textfield}
+          label="Date of Registration"
+          color="secondary"
+          type="date"
+          InputLabelProps={{
+            shrink: true,
+          }}
+        />
+      </div>
       <div className={classes.submit}>
         <Button
           type="submit"
@@ -75,6 +275,17 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   submit: {
+    margin: "10px",
+  },
+  section: {
+    width: "100%",
+    padding: "20px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+  },
+  textfield: {
+    flex: 1,
     margin: "10px",
   },
 }));

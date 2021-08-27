@@ -1,16 +1,13 @@
-import { useRouter } from "next/router";
 import Link from "next/link";
 import { makeStyles } from "@material-ui/core/styles";
 
 const Page = () => {
   const classes = useStyles();
-  const router = useRouter();
-  const { studentName } = router.query;
 
   return (
     <div className={classes.root}>
       <div className={classes.main}>
-        <h1>Thank you {studentName}, for registering.</h1>
+        <h1>Thank you, for registering.</h1>
         <br />
         <p>
           To contact us{" "}
