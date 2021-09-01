@@ -4,7 +4,7 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 
-const FacultyCard = ({ name, content, imgLoc }) => {
+const FacultyCard = ({ name, content, imgLoc, subjects }) => {
   const classes = useStyles();
 
   return (
@@ -23,6 +23,11 @@ const FacultyCard = ({ name, content, imgLoc }) => {
         <Typography variant="body2" color="textSecondary" component="p">
           {content}
         </Typography>
+        {subjects && (
+          <Typography variant="body2" color="textSecondary" component="p">
+            {subjects}
+          </Typography>
+        )}
       </CardContent>
     </Card>
   );

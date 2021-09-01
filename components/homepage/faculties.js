@@ -12,6 +12,41 @@ const FacultyPage = () => {
       content: "Founder and Director",
       imgLoc: "/images/author.jpg",
     },
+    {
+      id: 2,
+      name: "Mrs. Deepika Karan",
+      content: "Co-Founder",
+      imgLoc: "/images/mrssinha.jpg",
+    },
+    {
+      id: 3,
+      name: "Mr. Rajat Kumar Singh",
+      content: "B. tech. from NIT Delhi",
+      subjects: "Physics and Chemistry for class 11th and 12th.",
+      imgLoc: "/images/rajat.jpg",
+    },
+    {
+      id: 4,
+      name: "Mr. Rishabh Shukla",
+      content: "Masters in Political Science and Masters in History",
+      subjects:
+        "Social Science for class 9th and 10th, and Humanities for class 11th and 12th.",
+      imgLoc: "/images/rishab.jpg",
+    },
+    {
+      id: 5,
+      name: "Miss Neha",
+      content: "M. Com. from  Delhi University",
+      subjects: "Accounts and Economics for Commerce Students.",
+      imgLoc: "/images/neha.jpg",
+    },
+    {
+      id: 6,
+      name: "Miss Ishita",
+      content: "B. Com. from  Delhi University",
+      subjects: "All Subjects for Junior Batches.",
+      imgLoc: "/images/ishita.jpg",
+    },
   ];
 
   return (
@@ -24,7 +59,7 @@ const FacultyPage = () => {
         className={classes.grid}
         container
         justifyContent="center"
-        spacing={3}
+        spacing={4}
       >
         {faculties.map((data, i) => (
           <Grid item key={data.id}>
