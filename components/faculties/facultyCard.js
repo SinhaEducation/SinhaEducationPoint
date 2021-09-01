@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Card from "@material-ui/core/Card";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
@@ -9,13 +10,7 @@ const FacultyCard = ({ name, content, imgLoc, subjects }) => {
 
   return (
     <Card className={classes.rootCard}>
-      <CardMedia
-        component="img"
-        alt={name}
-        height="300"
-        image={imgLoc}
-        title={name}
-      />
+      <Image src={imgLoc} alt={name} width="485" height="497" />
       <CardContent>
         <Typography gutterBottom variant="h5" component="h2">
           {name}
