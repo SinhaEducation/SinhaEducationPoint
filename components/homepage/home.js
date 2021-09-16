@@ -11,10 +11,15 @@ const HeroPage = () => {
   return (
     <div id="home" className={classes.root}>
       <div className={classes.main}>
-        <Image src="/logo_5.svg" alt="brand logo" width="300" height="300" />
-        <h2 className={classes.title}>
+        <Image
+          src="/logo_5.svg"
+          alt="sinha education point"
+          width="300"
+          height="300"
+        />
+        <h1 className={classes.title}>
           Let&apos;s start to learn for better future.
-        </h2>
+        </h1>
         <Button
           variant="contained"
           className={classes.button}

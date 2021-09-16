@@ -13,7 +13,7 @@ const Home = () => {
         <title>Sinha Education Point</title>
         <meta
           name="description"
-          content="Sinha Education Point | Best coaching institute in area"
+          content="Sinha Education Point | Best coaching institute for all students wanting to learn any subjects."
         />
       </Head>
       <HeroPage />

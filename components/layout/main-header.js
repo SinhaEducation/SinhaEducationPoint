@@ -21,7 +21,12 @@ const MainHeader = () => {
             className={classes.menuButton}
             onClick={() => router.push("/")}
           >
-            <Image src="/logo.svg" alt="company logo" width="40" height="40" />
+            <Image
+              src="/logo.svg"
+              alt="sinha education point"
+              width="40"
+              height="40"
+            />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
             SINHA EDUCATION POINT

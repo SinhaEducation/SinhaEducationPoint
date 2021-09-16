@@ -12,7 +12,7 @@ const Page = () => {
         <title>Register | Sinha Education Point</title>
         <meta
           name="description"
-          content="Register for any class at Sinha Education Point | Best coaching institute in area"
+          content="Register for any class at Sinha Education Point | Best coaching institute for all students."
         />
       </Head>
       <FormHeader />

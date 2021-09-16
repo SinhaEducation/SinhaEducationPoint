@@ -38,7 +38,7 @@ const ContactPage = () => {
           >
             <TwitterIcon fontSize="large" />
           </IconButton>
-          <IconButton href="mailto:hardik0casr@gmail.com">
+          <IconButton href="mailto:sinhaeducationpoint@gmail.com">
             <MailIcon fontSize="large" />
           </IconButton>
         </div>
